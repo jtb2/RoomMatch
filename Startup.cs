@@ -10,18 +10,28 @@ namespace RoomMatch
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
+            Environment = env;
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<RoomMatchContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("StudentContext")));
+            if (Environment.IsDevelopment())
+            {
+                services.AddDbContext<RoomMatchContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("StudentContext")));
+            }
+            else
+            {
+                services.AddDbContext<RoomMatchContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("StudentContext")));
+            }
             services.AddRazorPages();
         }
 
