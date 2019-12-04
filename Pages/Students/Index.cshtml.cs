@@ -22,7 +22,7 @@ namespace RoomMatch.Pages.Students
 
         public async Task OnGetAsync()
         {
-            Student = await _context.Movie.ToListAsync();
+            Student = await _context.Student.ToListAsync();
         }
     }
 }

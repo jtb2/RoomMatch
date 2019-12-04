@@ -35,7 +35,7 @@ namespace RoomMatch.Pages.Students
                 return Page();
             }
 
-            _context.Movie.Add(Student);
+            _context.Student.Add(Student);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

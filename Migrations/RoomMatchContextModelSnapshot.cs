@@ -57,7 +57,7 @@ namespace RoomMatch.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Student");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,6 +9,6 @@ namespace RoomMatch.Models
         {
         }
 
-        public DbSet<Student> Movie { get; set; }
+        public DbSet<Student> Student { get; set; }
     }
 }

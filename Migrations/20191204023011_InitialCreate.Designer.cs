@@ -9,7 +9,7 @@ using RoomMatch.Models;
 namespace RoomMatch.Migrations
 {
     [DbContext(typeof(RoomMatchContext))]
-    [Migration("20191204022154_InitialCreate")]
+    [Migration("20191204023011_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,7 +59,7 @@ namespace RoomMatch.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Student");
                 });
 #pragma warning restore 612, 618
         }

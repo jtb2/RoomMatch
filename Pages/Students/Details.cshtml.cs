@@ -27,7 +27,7 @@ namespace RoomMatch.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
 
             if (Student == null)
             {
