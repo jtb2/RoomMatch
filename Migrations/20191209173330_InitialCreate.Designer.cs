@@ -9,7 +9,7 @@ using RoomMatch.Models;
 namespace RoomMatch.Migrations
 {
     [DbContext(typeof(RoomMatchContext))]
-    [Migration("20191204023011_InitialCreate")]
+    [Migration("20191209173330_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,38 +24,38 @@ namespace RoomMatch.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("A1")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A2")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A3")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A4")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A5")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A6")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A7")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A8")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("A9")
+                    b.Property<int>("Cleanliness")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DOB")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("IsOrganized")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("LikesLight")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("LikesWorkingAlone")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Sharing")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Sleep")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Social")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Sound")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Temperature")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 

@@ -15,15 +15,15 @@ namespace RoomMatch.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
                     DOB = table.Column<DateTime>(nullable: false),
-                    A1 = table.Column<bool>(nullable: false),
-                    A2 = table.Column<bool>(nullable: false),
-                    A3 = table.Column<bool>(nullable: false),
-                    A4 = table.Column<bool>(nullable: false),
-                    A5 = table.Column<bool>(nullable: false),
-                    A6 = table.Column<bool>(nullable: false),
-                    A7 = table.Column<bool>(nullable: false),
-                    A8 = table.Column<bool>(nullable: false),
-                    A9 = table.Column<bool>(nullable: false)
+                    IsOrganized = table.Column<bool>(nullable: false),
+                    LikesLight = table.Column<bool>(nullable: false),
+                    LikesWorkingAlone = table.Column<bool>(nullable: false),
+                    Sleep = table.Column<int>(nullable: false),
+                    Social = table.Column<int>(nullable: false),
+                    Cleanliness = table.Column<int>(nullable: false),
+                    Sharing = table.Column<int>(nullable: false),
+                    Sound = table.Column<int>(nullable: false),
+                    Temperature = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

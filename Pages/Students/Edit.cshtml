@@ -26,48 +26,48 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A1" /> @Html.DisplayNameFor(model => model.Student.A1)
+                    <input class="form-check-input" asp-for="Student.IsOrganized" /> @Html.DisplayNameFor(model => model.Student.IsOrganized)
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A2" /> @Html.DisplayNameFor(model => model.Student.A2)
+                    <input class="form-check-input" asp-for="Student.LikesLight" /> @Html.DisplayNameFor(model => model.Student.LikesLight)
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A3" /> @Html.DisplayNameFor(model => model.Student.A3)
+                    <input class="form-check-input" asp-for="Student.LikesWorkingAlone" /> @Html.DisplayNameFor(model => model.Student.LikesWorkingAlone)
                 </label>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A4" /> @Html.DisplayNameFor(model => model.Student.A4)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Sleep" class="control-label"></label>
+                <select asp-for="Student.Sleep" class="form-control"></select>
+                <span asp-validation-for="Student.Sleep" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A5" /> @Html.DisplayNameFor(model => model.Student.A5)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Social" class="control-label"></label>
+                <select asp-for="Student.Social" class="form-control"></select>
+                <span asp-validation-for="Student.Social" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A6" /> @Html.DisplayNameFor(model => model.Student.A6)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Cleanliness" class="control-label"></label>
+                <select asp-for="Student.Cleanliness" class="form-control"></select>
+                <span asp-validation-for="Student.Cleanliness" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A7" /> @Html.DisplayNameFor(model => model.Student.A7)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Sharing" class="control-label"></label>
+                <select asp-for="Student.Sharing" class="form-control"></select>
+                <span asp-validation-for="Student.Sharing" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A8" /> @Html.DisplayNameFor(model => model.Student.A8)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Sound" class="control-label"></label>
+                <select asp-for="Student.Sound" class="form-control"></select>
+                <span asp-validation-for="Student.Sound" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Student.A9" /> @Html.DisplayNameFor(model => model.Student.A9)
-                </label>
+            <div class="form-group">
+                <label asp-for="Student.Temperature" class="control-label"></label>
+                <select asp-for="Student.Temperature" class="form-control"></select>
+                <span asp-validation-for="Student.Temperature" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
