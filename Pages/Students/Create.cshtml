@@ -1,5 +1,6 @@
 @page
 @model RoomMatch.Pages.Students.CreateModel
+@namespace RoomMatch.Models
 
 @{
     ViewData["Title"] = "Create";
@@ -40,32 +41,32 @@
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sleep" class="control-label"></label>
-                <select asp-for="Student.Sleep" class="form-control"></select>
+                <select asp-for="Student.Sleep" asp-items="Html.GetEnumSelectList<LevelFive>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sleep" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Social" class="control-label"></label>
-                <select asp-for="Student.Social" class="form-control"></select>
+                <select asp-for="Student.Social" asp-items="Html.GetEnumSelectList<LevelFour>()" class="form-control"></select>
                 <span asp-validation-for="Student.Social" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Cleanliness" class="control-label"></label>
-                <select asp-for="Student.Cleanliness" class="form-control"></select>
+                <select asp-for="Student.Cleanliness" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Cleanliness" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sharing" class="control-label"></label>
-                <select asp-for="Student.Sharing" class="form-control"></select>
+                <select asp-for="Student.Sharing" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sharing" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sound" class="control-label"></label>
-                <select asp-for="Student.Sound" class="form-control"></select>
+                <select asp-for="Student.Sound" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sound" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Temperature" class="control-label"></label>
-                <select asp-for="Student.Temperature" class="form-control"></select>
+                <select asp-for="Student.Temperature" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Temperature" class="text-danger"></span>
             </div>
             <div class="form-group">
