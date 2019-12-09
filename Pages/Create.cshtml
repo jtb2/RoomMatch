@@ -1,19 +1,18 @@
 @page
-@model RoomMatch.Pages.Students.EditModel
+@model RoomMatch.Pages.CreateModel
+@namespace RoomMatch.Models
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Submit Form";
 }
 
-<h1>Edit</h1>
+<h1>Submit Form</h1>
 
-<h4>Student</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Student.ID" />
             <div class="form-group">
                 <label asp-for="Student.Name" class="control-label"></label>
                 <input asp-for="Student.Name" class="form-control" />
@@ -41,43 +40,43 @@
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sleep" class="control-label"></label>
-                <select asp-for="Student.Sleep" class="form-control"></select>
+                <select asp-for="Student.Sleep" asp-items="Html.GetEnumSelectList<LevelFive>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sleep" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Social" class="control-label"></label>
-                <select asp-for="Student.Social" class="form-control"></select>
+                <select asp-for="Student.Social" asp-items="Html.GetEnumSelectList<LevelFour>()" class="form-control"></select>
                 <span asp-validation-for="Student.Social" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Cleanliness" class="control-label"></label>
-                <select asp-for="Student.Cleanliness" class="form-control"></select>
+                <select asp-for="Student.Cleanliness" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Cleanliness" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sharing" class="control-label"></label>
-                <select asp-for="Student.Sharing" class="form-control"></select>
+                <select asp-for="Student.Sharing" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sharing" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sound" class="control-label"></label>
-                <select asp-for="Student.Sound" class="form-control"></select>
+                <select asp-for="Student.Sound" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Sound" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Temperature" class="control-label"></label>
-                <select asp-for="Student.Temperature" class="form-control"></select>
+                <select asp-for="Student.Temperature" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
                 <span asp-validation-for="Student.Temperature" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

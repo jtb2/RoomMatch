@@ -1,19 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using RoomMatch.Models;
 
-namespace RoomMatch.Pages.Students
+namespace RoomMatch.Pages
 {
     public class CreateModel : PageModel
     {
-        private readonly RoomMatch.Models.RoomMatchContext _context;
+        private readonly RoomMatchContext _context;
 
-        public CreateModel(RoomMatch.Models.RoomMatchContext context)
+        public CreateModel(RoomMatchContext context)
         {
             _context = context;
         }
