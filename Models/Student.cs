@@ -13,8 +13,11 @@ namespace RoomMatch.Models
         public string Name { get; set; }
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
+        [Display(Name = "Are you organized?")]
         public bool IsOrganized { get; set; }
+        [Display(Name = "Do you like a lot of light?")]
         public bool LikesLight { get; set; }
+        [Display(Name = "Do you prefer to work alone?")]
         public bool LikesWorkingAlone { get; set; }
         public LevelFive Sleep { get; set; }
         public LevelFour Social { get; set; }

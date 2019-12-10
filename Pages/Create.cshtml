@@ -40,32 +40,59 @@
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sleep" class="control-label"></label>
-                <select asp-for="Student.Sleep" asp-items="Html.GetEnumSelectList<LevelFive>()" class="form-control"></select>
+                <select asp-for="Student.Sleep" class="form-control">
+                    <option value="0">I take naps whenever possible</option>
+                    <option value="1">I never take naps</option>
+                    <option value="2">I occasionally take naps</option>
+                    <option value="3">I prefer to stay up late</option>
+                    <option value="4">I prefer to wake up early</option>
+                </select>
                 <span asp-validation-for="Student.Sleep" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Social" class="control-label"></label>
-                <select asp-for="Student.Social" asp-items="Html.GetEnumSelectList<LevelFour>()" class="form-control"></select>
+                <select asp-for="Student.Social" class="form-control">
+                    <option value="0">I like to have friends around me at all times</option>
+                    <option value="1">I only like a couple of people around</option>
+                    <option value="2">I do not like to have many people around</option>
+                    <option value="3">I need time alone each day</option>
+                </select>
                 <span asp-validation-for="Student.Social" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Cleanliness" class="control-label"></label>
-                <select asp-for="Student.Cleanliness" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
+                <select asp-for="Student.Cleanliness" class="form-control">
+                    <option value="0">I clean daily</option>
+                    <option value="1">I clean 3 or 4 times a week</option>
+                    <option value="2">I only clean for room inspection</option>
+                </select>
                 <span asp-validation-for="Student.Cleanliness" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sharing" class="control-label"></label>
-                <select asp-for="Student.Sharing" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
+                <select asp-for="Student.Sharing" class="form-control">
+                    <option value="0">I am not willing to share personal items</option>
+                    <option value="1">I am willing to share personal items as long as I am asked first</option>
+                    <option value="2">I am willing to share personal items</option>
+                </select>
                 <span asp-validation-for="Student.Sharing" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Sound" class="control-label"></label>
-                <select asp-for="Student.Sound" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
+                <select asp-for="Student.Sound" class="form-control">
+                    <option value="0">I concentrate best when it is quiet</option>
+                    <option value="1">I can concentrate with a little noise</option>
+                    <option value="2">I can easily block out noise</option>
+                </select>
                 <span asp-validation-for="Student.Sound" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Student.Temperature" class="control-label"></label>
-                <select asp-for="Student.Temperature" asp-items="Html.GetEnumSelectList<LevelThree>()" class="form-control"></select>
+                <select asp-for="Student.Temperature" class="form-control">
+                    <option value="0">I prefer the room to be warm, above 73°</option>
+                    <option value="1">I prefer the room to be cool, 68-72°</option>
+                    <option value="2">I prefer the room to be cold, below 68°</option>
+                </select>
                 <span asp-validation-for="Student.Temperature" class="text-danger"></span>
             </div>
             <div class="form-group">
